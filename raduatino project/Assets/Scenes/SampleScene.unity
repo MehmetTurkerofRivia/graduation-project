@@ -583,7 +583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_Range
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_Intensity
@@ -640,6 +640,14 @@ PrefabInstance:
     - target: {fileID: 3937550559637991140, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066466663099117834, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 9066466663099117834, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
+      propertyPath: far clip plane
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
