@@ -23,5 +23,10 @@ public class CharacterMovement : MonoBehaviour
         Vector3 moveDirection = transform.forward * verticalInput * speed;
 
         characterController.SimpleMove(moveDirection);
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            horizontalInput *= -1;
+        }
     }
 }
