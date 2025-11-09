@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1884691916875848656
+--- !u!1001 &1632645985950091805
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.90358
+      value: 105.29444
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.0000019073486
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 60.009865
+      value: 53.794353
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
       propertyPath: m_Name
-      value: wall
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -58,5 +58,34 @@ PrefabInstance:
     - {fileID: 3436763905212568267, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
     - {fileID: -1857435916081532784, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7682904990489057925}
   m_SourcePrefab: {fileID: 100100000, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
+--- !u!1 &1903117249402173260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 762dfbd70b09e1440a5912748c0ab9ac, type: 3}
+  m_PrefabInstance: {fileID: 1632645985950091805}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7682904990489057925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903117249402173260}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5, y: 5, z: 9.5}
+  m_Center: {x: 2.28, y: 2, z: 0}
