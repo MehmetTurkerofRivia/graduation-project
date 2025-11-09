@@ -8,10 +8,10 @@ public class CharacterAniamtion : MonoBehaviour
 
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.W) ||
-           Input.GetKeyDown(KeyCode.A) ||
-           Input.GetKeyDown(KeyCode.S) ||
-           Input.GetKeyDown(KeyCode.D))
+       if (Input.GetKey(KeyCode.W) ||
+           Input.GetKey(KeyCode.A) ||
+           Input.GetKey(KeyCode.S) ||
+           Input.GetKey(KeyCode.D))
         {
             isWalking = true;
         }
