@@ -1,9 +1,8 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class CharacterMovement : MonoBehaviour
 {
     private float speed = 10.0f;
-    private float rotationSpeed = 120.0f; // degrees per second
-
     private CharacterController characterController;
 
     void Start()
@@ -16,17 +15,10 @@ public class CharacterMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Rotate character
-        transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
-
-        // Move character
-        Vector3 moveDirection = transform.forward * verticalInput * speed;
+        // Karakterin yönüne göre ileri-geri ve saða-sola hareket et
+        Vector3 moveDirection = (transform.forward * verticalInput) + (transform.right * horizontalInput);
+        moveDirection *= speed;
 
         characterController.SimpleMove(moveDirection);
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            horizontalInput *= -1;
-        }
     }
 }
