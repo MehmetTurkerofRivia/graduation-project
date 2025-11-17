@@ -321,10 +321,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 173307594}
     m_Modifications:
     - target: {fileID: 3934431280800481531, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3934431280800481531, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.5
       objectReference: {fileID: 0}
@@ -364,18 +360,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5008977131752893946, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5008977131752893946, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2a737fdb4aa0129469aff13c6f4bd0c3, type: 2}
-    - target: {fileID: 5008977131752893946, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
-      propertyPath: 'm_Materials.Array.data[1]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 2a737fdb4aa0129469aff13c6f4bd0c3, type: 2}
     - target: {fileID: 7774289315734174288, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -824,6 +808,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5008977131752893946, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 333a08b54ec5eec4f84f74d910ad751e, type: 2}
     - target: {fileID: 7774289315734174288, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -3158,15 +3146,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_SpotAngle
-      value: 67.80303
+      value: 48.8797
       objectReference: {fileID: 0}
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_InnerSpotAngle
-      value: 18.923332
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_Shadows.m_Type
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1902454293278164267, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_RenderingLayerMask
