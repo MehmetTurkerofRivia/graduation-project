@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class CharacterMovement : MonoBehaviour
 {
-    private float speed = 10.0f;
+    public float speed = 100.0f;
     private CharacterController characterController;
 
     void Start()
