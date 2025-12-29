@@ -11,8 +11,7 @@ public class CollectableObjects : MonoBehaviour
     public Light directionalLight;
     public Material nightSkybox;
     public Color darkAmbient = Color.black;
-
-
+    public bool canLoadScene = false;
 
     void Start()
     {
@@ -29,6 +28,7 @@ public class CollectableObjects : MonoBehaviour
             RenderSettings.skybox = nightSkybox;
             DynamicGI.UpdateEnvironment();
             RenderSettings.ambientLight = darkAmbient;
+            canLoadScene = true;
         }
 
         foreach (GameObject obj in objects)
@@ -47,4 +47,10 @@ public class CollectableObjects : MonoBehaviour
             objects.Remove(obj);
         }
     }
+
+    private void Update()
+    {
+        Debug.Log(canLoadScene);
+    }
 }
+
