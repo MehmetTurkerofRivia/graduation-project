@@ -3,17 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class labirentDoorOpener : MonoBehaviour
 {
-    public CollectableObjects collectableObjects;
+    public KeySpawner keySpawner;
     private bool loaded = false;
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (loaded) return; // tekrar tekrar yüklemesin
-
-        // Önce objeler bitmiþ mi kontrol et
-        if (!collectableObjects.canLoadScene) return;
-
-        // Kapýya çarptý mý?
+        if (loaded) return;
+        if (!keySpawner.canLoadScene) return;
         if (hit.gameObject.CompareTag("Door"))
         {
             loaded = true;
