@@ -1,8 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
     public float speed = 8f;
+    public float slowBackSpeedMultiplier = 0.5f; // S basınca hız
     public float jumpForce = 8f;
 
     private CharacterController characterController;
@@ -18,11 +19,20 @@ public class CharacterMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
+        float currentSpeed = speed;
+
+        // ⬇️ S tuşuna basılıysa yavaşla
+        if (verticalInput < 0)
+        {
+            currentSpeed *= slowBackSpeedMultiplier;
+        }
+
         Vector3 moveDirection =
             (transform.forward * verticalInput) +
             (transform.right * horizontalInput);
 
-        moveDirection *= speed;
+        moveDirection *= currentSpeed;
+
         if (characterController.isGrounded)
         {
             if (verticalVelocity < 0)
@@ -33,8 +43,10 @@ public class CharacterMovement : MonoBehaviour
                 verticalVelocity = jumpForce;
             }
         }
-        verticalVelocity += Physics.gravity.y * Time.deltaTime*3f;
+
+        verticalVelocity += Physics.gravity.y * Time.deltaTime * 3f;
         moveDirection.y = verticalVelocity;
-        characterController.Move(moveDirection * Time.deltaTime*3f);
+
+        characterController.Move(moveDirection * Time.deltaTime * 3f);
     }
 }
