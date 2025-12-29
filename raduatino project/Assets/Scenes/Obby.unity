@@ -750,6 +750,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3315801840561154763, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 524574253}
+    - targetCorrespondingSourceObject: {fileID: 3315801840561154763, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 524574256}
     - targetCorrespondingSourceObject: {fileID: 6368804105934564453, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 524574255}
@@ -821,6 +824,18 @@ MonoBehaviour:
   key: {fileID: 0}
   eliminucu: {fileID: 0}
   canLoadScene: 0
+--- !u!114 &524574256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524574249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b8f52f1224460e4397dae97c0c0251f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Falltransaction
 --- !u!1001 &565908734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1540,7 +1555,7 @@ GameObject:
   - component: {fileID: 1418937590}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2033,7 +2048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3934431280800481531, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 101.1
+      value: 100.6
       objectReference: {fileID: 0}
     - target: {fileID: 3934431280800481531, guid: 6ce82db314340874381a1e885e55dde9, type: 3}
       propertyPath: m_LocalRotation.w
