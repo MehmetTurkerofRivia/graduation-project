@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CharacterAniamtion : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private Animator animator;  // Inspector’dan baðlayýn
+    [SerializeField] private float speed = 20f;
+    [SerializeField] private Animator animator;
     bool isWalking = false;
 
     void Update()

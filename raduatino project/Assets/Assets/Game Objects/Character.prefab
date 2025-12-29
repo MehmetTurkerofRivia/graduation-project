@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 7658877198913528286}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdc21088b20e2b49b4d168379582430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 100
+  speed: 10
 --- !u!143 &4340910588609360259
 CharacterController:
   m_ObjectHideFlags: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5a290daebfc048a0903d357d222e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAniamtion
-  speed: 5
+  speed: 10
   animator: {fileID: 7926564632737205854}
 --- !u!1 &6278771840598360327
 GameObject:

@@ -1,9 +1,12 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 100.0f;
+    public float speed = 8f;
+    public float jumpForce = 8f;
+
     private CharacterController characterController;
+    private float verticalVelocity;
 
     void Start()
     {
@@ -15,10 +18,23 @@ public class CharacterMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        // Karakterin yönüne göre ileri-geri ve saða-sola hareket et
-        Vector3 moveDirection = (transform.forward * verticalInput) + (transform.right * horizontalInput);
-        moveDirection *= speed;
+        Vector3 moveDirection =
+            (transform.forward * verticalInput) +
+            (transform.right * horizontalInput);
 
-        characterController.SimpleMove(moveDirection);
+        moveDirection *= speed;
+        if (characterController.isGrounded)
+        {
+            if (verticalVelocity < 0)
+                verticalVelocity = -1f;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                verticalVelocity = jumpForce;
+            }
+        }
+        verticalVelocity += Physics.gravity.y * Time.deltaTime*3f;
+        moveDirection.y = verticalVelocity;
+        characterController.Move(moveDirection * Time.deltaTime*3f);
     }
 }
