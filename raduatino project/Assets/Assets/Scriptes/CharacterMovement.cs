@@ -44,9 +44,9 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
-        verticalVelocity += Physics.gravity.y * Time.deltaTime * 3f;
+        verticalVelocity += Physics.gravity.y * Time.deltaTime * 2.5f;
         moveDirection.y = verticalVelocity;
 
-        characterController.Move(moveDirection * Time.deltaTime * 3f);
+        characterController.Move(moveDirection * Time.deltaTime * 2.5f);
     }
 }
