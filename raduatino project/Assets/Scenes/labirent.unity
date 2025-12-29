@@ -7669,8 +7669,8 @@ MonoBehaviour:
   player: {fileID: 1670057173}
   playerCamera: {fileID: 1279647429}
   animator: {fileID: 1357460593}
-  maxSpeed: 8
-  minSpeed: 6
+  maxSpeed: 6
+  minSpeed: 4
   rotationSpeed: 6
   stopDistance: 0
   lookStopDistance: 16
@@ -8400,7 +8400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38268754, y: 0.4583333}
   m_AnchorMax: {x: 0.62879163, y: 0.54262966}
-  m_AnchoredPosition: {x: -698, y: 471.00003}
+  m_AnchoredPosition: {x: -698, y: 471}
   m_SizeDelta: {x: -312, y: -61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526162408
@@ -14017,6 +14017,14 @@ PrefabInstance:
     - target: {fileID: 3315801840561154763, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_Name
       value: Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933775953223830984, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933775953223830984, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
+      propertyPath: jumpForce
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3937550559637991140, guid: 8aeec6b672b34af4da3664d7ee2ca56a, type: 3}
       propertyPath: m_LocalPosition.x
