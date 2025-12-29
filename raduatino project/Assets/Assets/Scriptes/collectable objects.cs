@@ -7,6 +7,7 @@ public class CollectableObjects : MonoBehaviour
     public Material Lmaterial;
     public GameObject picFrame;
     public GameObject door;
+    public GameObject clown;
 
     void Start()
     {
@@ -19,6 +20,11 @@ public class CollectableObjects : MonoBehaviour
         {
             picFrame.GetComponent<MeshRenderer>().material = Lmaterial;
             door.transform.Rotate(0f, 35f, 0f);
+            clown.transform.rotation = Quaternion.Lerp(
+            door.transform.rotation,
+            Quaternion.Euler(0f, 35f, 0f),
+            Time.deltaTime
+);
         }
 
         foreach (GameObject obj in objects)

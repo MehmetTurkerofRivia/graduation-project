@@ -116,15 +116,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696752750994997749}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.2, z: 0}
+  m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0.5, y: 0.20000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6087765495629813804}
   - {fileID: 562965403902132680}
   m_Father: {fileID: 3937550559637991140}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
 --- !u!114 &6020979795314173378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +174,8 @@ GameObject:
   - component: {fileID: 3933775953223830984}
   - component: {fileID: 4340910588609360259}
   - component: {fileID: 7658877198913528286}
+  - component: {fileID: 2141041341837178201}
+  - component: {fileID: 260369473146457997}
   m_Layer: 0
   m_Name: Character
   m_TagString: Player
@@ -211,7 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fdc21088b20e2b49b4d168379582430, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 10
+  speed: 7
+  jumpForce: 3
 --- !u!143 &4340910588609360259
 CharacterController:
   m_ObjectHideFlags: 0
@@ -251,6 +254,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterAniamtion
   speed: 10
   animator: {fileID: 7926564632737205854}
+--- !u!114 &2141041341837178201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315801840561154763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a9e77f62f744245b6bd70ee3cba486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemTrigger
+  collectableObjects: {fileID: 0}
+--- !u!114 &260369473146457997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315801840561154763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eefe286097fd074097c40caaacec5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashlightToggle
+  flashlight: {fileID: 1902454293278164267}
+  flashlightModel: {fileID: 0}
 --- !u!1 &6278771840598360327
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +292,7 @@ GameObject:
   - component: {fileID: 562965403902132680}
   - component: {fileID: 1902454293278164267}
   - component: {fileID: 2838630369941993453}
+  - component: {fileID: 6443847609775019479}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -295,10 +326,10 @@ Light:
   serializedVersion: 13
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
+  m_Intensity: 15
   m_Range: 10
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 130.1203
+  m_SpotAngle: 48.8797
+  m_InnerSpotAngle: 0
   m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
@@ -333,7 +364,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 4294967295
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -369,7 +400,7 @@ MonoBehaviour:
   m_SoftShadowQuality: 0
   m_RenderingLayersMask:
     serializedVersion: 0
-    m_Bits: 1
+    m_Bits: 4294967295
   m_ShadowRenderingLayersMask:
     serializedVersion: 0
     m_Bits: 1
@@ -378,6 +409,20 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!114 &6443847609775019479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6278771840598360327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eefe286097fd074097c40caaacec5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlashlightToggle
+  flashlight: {fileID: 0}
+  flashlightModel: {fileID: 0}
 --- !u!1 &6368804105934564453
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,7 +580,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 20
   field of view: 60
   orthographic: 0
   orthographic size: 5
