@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class CollectableObjects : MonoBehaviour
 {
@@ -7,7 +8,11 @@ public class CollectableObjects : MonoBehaviour
     public Material Lmaterial;
     public GameObject picFrame;
     public GameObject door;
-    public GameObject clown;
+    public Light directionalLight;
+    public Material nightSkybox;
+    public Color darkAmbient = Color.black;
+
+
 
     void Start()
     {
@@ -19,12 +24,11 @@ public class CollectableObjects : MonoBehaviour
         if (objects.Count == 0)
         {
             picFrame.GetComponent<MeshRenderer>().material = Lmaterial;
-            door.transform.Rotate(0f, 35f, 0f);
-            clown.transform.rotation = Quaternion.Lerp(
-            door.transform.rotation,
-            Quaternion.Euler(0f, 35f, 0f),
-            Time.deltaTime
-);
+            door.transform.Rotate(0f, -35f, 0f);
+            directionalLight.intensity = 0.1f;
+            RenderSettings.skybox = nightSkybox;
+            DynamicGI.UpdateEnvironment();
+            RenderSettings.ambientLight = darkAmbient;
         }
 
         foreach (GameObject obj in objects)
