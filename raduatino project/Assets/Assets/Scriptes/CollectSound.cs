@@ -1,15 +1,28 @@
 using UnityEngine;
 
-public class CollectibleSound : MonoBehaviour
+public class CollectSound : MonoBehaviour
 {
-    public AudioClip collectSound;
+    public float collectDistance = 1f;
 
-    private void OnTriggerEnter(Collider other)
+    void Update()
     {
-        if (other.CompareTag("Player"))
+        RaycastHit hit;
+
+        // Karakterin önüne kýsa bir ray at
+        if (Physics.Raycast(transform.position, transform.forward, out hit, collectDistance))
         {
-            AudioSource.PlayClipAtPoint(collectSound, transform.position);
-            Destroy(gameObject);
+            if (!hit.collider.CompareTag("TriggerObject"))
+                return;
+
+            AudioSource audio = hit.collider.GetComponent<AudioSource>();
+            if (audio == null)
+                return;
+
+            if (!audio.isPlaying)
+            {
+                audio.Play();
+                Destroy(hit.collider.gameObject, audio.clip.length);
+            }
         }
     }
 }
