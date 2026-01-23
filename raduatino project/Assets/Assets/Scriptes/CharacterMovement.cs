@@ -44,7 +44,6 @@ public class CharacterMovement : MonoBehaviour
                 verticalVelocity = jumpForce;
         }
 
-        // ⬇️ KALICI GRAVITY
         float gravityMultiplier = isSlowed
             ? slowGravityMultiplier
             : normalGravityMultiplier;
@@ -57,7 +56,6 @@ public class CharacterMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // BİR KERE değmesi yeterli
         if (hit.collider.CompareTag("Slow"))
         {
             isSlowed = true;

@@ -23,8 +23,6 @@ public class PlayerDeath : MonoBehaviour
     {
         if (isDead) return;
         isDead = true;
-
-        // 🩸 Kan efekti
         if (bloodEffect != null && bloodPlace != null)
         {
             Instantiate(
@@ -33,8 +31,6 @@ public class PlayerDeath : MonoBehaviour
                 bloodPlace.rotation
             );
         }
-
-        // ⛔ Kontrolü kapat
         if (cc != null)
             cc.enabled = false;
 
